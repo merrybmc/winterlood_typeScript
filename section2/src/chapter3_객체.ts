@@ -21,7 +21,7 @@ user = {
 };
 
 let config: {
-  //
+  // readonly = 값 변경 금지, 읽기 전용
   readonly apiKey: string;
 } = {
   apiKey: 'MY API KEY',
