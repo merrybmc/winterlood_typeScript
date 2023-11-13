@@ -10,6 +10,7 @@
 
 // 함수 버전들
 // -> 1. 오버로드 시그니처 = 함수 내부의 구현부 작성 없이 선언만 한 것
+// === 호출 시그니처
 function func(a: number): void;
 function func(a: number, b: number, c: number): void;
 
