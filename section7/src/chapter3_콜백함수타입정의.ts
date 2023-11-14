@@ -2,6 +2,7 @@
  * map 메서드
  */
 
+// map 콜백함수
 const arr = [1, 2, 3];
 const newArr = arr.map((data) => data * 2);
 console.log(newArr);
@@ -39,3 +40,17 @@ function map2<T, U>(arr: T[], callback: (item: T) => U) {
 
 let mapArr3 = map2(['hi', 'hello', 'world'], (data) => parseInt(data));
 console.log(mapArr3);
+
+// forEach 콜백함수
+const arr2 = [1, 2, 3];
+arr2.forEach((data) => console.log(data));
+
+function forEach<T>(arr: T[], callback: (item: T) => void) {
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i]);
+  }
+}
+
+forEach(arr2, (data) => console.log(data));
+
+forEach(['123', '456', '789'], (data) => console.log(parseInt(data)));
