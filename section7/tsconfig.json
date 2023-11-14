@@ -1,0 +1,22 @@
+{
+  // 타입스크립트 컴파일러 tsc가 어떤 폴더안에 있는 타입스크립트 파일들을 컴파일 할건지
+  "include": ["src"],
+  "compilerOptions": {
+    // 변환되는 자바스크립트 코드가 사용할 자바스크립트의 버전
+    "target": "ESNext",
+    // 변환되는 자바스크립트 코드가 사용할 모듈 시스템을 정하는 옵션
+    "module": "ESNext",
+    // 컴파일러 결과로 생성되는 자바스크립트 코드들이 어디에 저장될건지
+    "outDir": "dist",
+    // 엄격한 타입 검사
+    "strict": true,
+    // 자동으로 모든 타입스크립트 파일들을 개별 모듈로 취급
+    "moduleDetection": "force",
+    // 빈 값에 Null 사용 가능
+    "strictNullChecks": false,
+    // any 사용 불가능하게 할건지
+    "noImplicitAny": false,
+    "allowJs": true
+  },
+  "ts-node": { "esm": true }
+}
