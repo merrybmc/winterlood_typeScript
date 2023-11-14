@@ -15,7 +15,7 @@
     // 빈 값에 Null 사용 가능
     "strictNullChecks": false,
     // any 사용 불가능하게 할건지
-    "noImplicitAny": false,
+    // "noImplicitAny": false,
     "allowJs": true
   },
   "ts-node": { "esm": true }
