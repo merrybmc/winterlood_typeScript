@@ -58,3 +58,4 @@
 - 3. npm install typescript -g 타입 스크립트 global로 설치
      (global = 폴더 안에서만 사용하는게 아닌 아닌 컴퓨터 전체에서 사용할 수 있는 환경을 만들어주도록 설치)
 - 4. tsc -v 타입스크립트가 잘 설치되었는지 확인
+- 5. tsc --init tsconfig.json 설치

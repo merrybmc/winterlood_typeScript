@@ -1,0 +1,21 @@
+{
+  // include 컴파일할 범위
+  // src 경로 아래에 있는 모든 파일을 포함해서 컴파일
+  "include": ["src"],
+  "compilerOptions": {
+    // target 컴파일된 결과 자바스크립트 생성 버전
+    // ESNext 자바스크립트 최신버전
+    "target": "ESNext",
+    "module": "ESNext",
+    // 컴파일 결과가 생성될 자바스크립트 파일들이 어디에 위치할지
+    "outDir": "dist",
+    // 타입스크립트 코드를 엄격하게 검사
+    "strict": false,
+    // 타입스크립트가 각각의 파일을 어떠한 모듈로 감지할 것인지
+    "moduleDetection": "force"
+  },
+  "ts-node": {
+    // ts-node가 es module system으로 작동
+    "esm": true
+  }
+}
