@@ -50,3 +50,11 @@
   - 동적인 타입 시스템의 안전하지 않은 문제를 해결하면서도
   - 정적인 타입 시스템의 귀찮음도 동시에 해결함
   - 모든 변수에 타입을 일일이 지정할 필요가 없음
+
+타입스크립트 setting
+
+- 1. npm init node.js 패키지 초기화
+- 2. npm install @types/node typesnode 패키지 설치
+- 3. npm install typescript -g 타입 스크립트 global로 설치
+     (global = 폴더 안에서만 사용하는게 아닌 아닌 컴퓨터 전체에서 사용할 수 있는 환경을 만들어주도록 설치)
+- 4. tsc -v 타입스크립트가 잘 설치되었는지 확인
