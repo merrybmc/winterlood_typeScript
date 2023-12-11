@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div>dd</div>
+</body>
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+<script>
+
+    $(document).ready(function () {
+        var uri = 'ws://' + "http://ml.emct.kr:20080/Home";
+        var ws = new WebSocket(uri);
+
+        ws.onopen = function () {
+            // What to do when you connect
+        };
+
+        ws.onerror = function (event) {
+            // What to do if an error occurs
+        };
+
+        ws.onmessage = function (event) {
+            var json = jQuery.parseJSON(event.data);
+            if (!Array.isArray(json))
+                return;
+
+            for (var i = 0; i < json.length; i++) {
+                var valueString = '';
+                var rawValueString = '';
+                var channelId = json[i].ChannelId;
+
+                if (json[i].Value != null && !isNaN(json[i].Value))
+                    valueString = json[i].Value.toFixed(4);
+
+                if (json[i].RawValue != null && !isNaN(json[i].RawValue))
+                    rawValueString = json[i].RawValue.toFixed(4);
+
+                $('#channel' + json[i].ChannelId + '_value').text(valueString);
+
+
+                $('#channel' + json[i].ChannelId + '_rawValue').text(rawValueString);
+            }
+        };
+    });
+
+</script>
+
+</html>
